@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="../asset/webfonts/all.min.css">
+
+    <!-- js bootstrap -->
+    <script src="../asset/bootstrap/jquery/jquery.min.js" defer></script>
+    <script src="../asset/bootstrap/js/popper.min.js" defer></script>
+    <script src="../asset/bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="../asset/js/script.js" defer></script>
+    <script src="../asset/js/update.js" defer></script>
+    <title>MicroS sans Framework</title>
+</head>
+<body>
+    <!-- modal used in this page -->
+        <!-- add modal -->
+        <div class="modal fade" id="modaladd" role="dialog" aria-labelledby="modalabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modalabel">Add client</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="myform" enctype="multipart/form-data">
+                            <h6 class="text-success" id="success"></h6>
+                            <div class="form-group">
+                                <label for="nom"><b>Nom :</b></label>
+                                <input type="text" id="nom" class="form-control" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><b>Email :</b></label>
+                                <input type="email" id="email" class="form-control" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><b>Password :</b></label>
+                                <input type="password" minlength="8" id="password" class="form-control" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="nom"><b>Image :</b></label>
+                                <input type="file" id="image" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-danger" type="reset" data-dismiss="modal">fermer</button>
+                                <button class="btn btn-success" id="save" type="submit">Saves</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- update modal -->
+        <div class="modal fade" id="modalupdate" role="dialog" aria-labelledby="modalabelup">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modalabelup">Update client</h2>
+                    </div>
+                    <div class="modal-body" id="modalupdates">
+                        <form action="" id="myform2" enctype="multipart/form-data">
+                            <h6 class="text-success" id="success2"></h6>
+                            <div class="form-group">
+                                <label for="nom"><b>Nom :</b></label>
+                                <input type="text" id="update_nom" class="form-control" autocomplete="off">
+                                <input type="text" id="update_id" hidden>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><b>Email :</b></label>
+                                <input type="email" id="update_email" class="form-control" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><b>Password :</b></label>
+                                <input type="password" minlength="8" id="update_password" class="form-control" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="nom"><b>Image :</b></label>
+                                <input type="file" id="update_image" class="form-control">
+                                <input type="text" id="update_images" hidden>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-danger" type="reset" data-dismiss="modal">fermer</button>
+                                <button class="btn btn-success" id="save" type="submit">Saves</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- show delete modal -->
+        <div class="modal fade" id="modaldelete" role="dialog" aria-labelledby="modalabeldel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modalabeldel">Message</h2>
+                    </div>
+                    <div class="modal-body" id="">
+                        <h4>User deleted</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="reset" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal used in this page -->
+    <header style="position: relative;">
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#" data-toggle="modal" aria-hidden="true" data-target="#modaladd">Add client</a>
+            <div class="search-container">
+            </div>
+          </div>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h1>Liste des clients</h1>
+                <span>(3 par paage, andramo nge manao add mihotra 3 eh)</span>
+            </div>
+            <div class="row" id="blocUser">
+                <!-- eto ny data mvoka -->
+            </div>
+            <div class="pagination text-center" id="paginate">
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
